@@ -1,0 +1,11 @@
+class IncludeIndexes < ActiveRecord::Migration
+  def up
+    add_index :movies, :id
+    add_index :moviegoers, :id
+  end
+
+  def down
+    remove_index :movies, :id
+    remove_index :moviegoers, :id
+  end
+end
